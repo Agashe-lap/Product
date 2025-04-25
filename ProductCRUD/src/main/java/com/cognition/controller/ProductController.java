@@ -20,6 +20,11 @@ public class ProductController {
 	@Autowired
 	private ProductService ps;
 	
+	@GetMapping("/")
+	public String home() {
+		return "Options are add, display, delete, update";
+	}
+	
 	@GetMapping("/display")
 	public List<Product> display(){
 		return ps.display();
